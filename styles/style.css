@@ -42,11 +42,16 @@ nav {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 1300px;
+    max-width: 1200px;
     height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all .3s ease;
+}
+
+nav * {
+    background: transparent;
 }
 
 .nav-list {
@@ -56,6 +61,15 @@ nav {
 
 .nav-list a {
     color: var(--text-color);
+    font-weight: 700;
+    /* border-bottom: 1px solid transparent; */
+    transition: all .3s ease;
+}
+
+.nav-list a:hover {
+    /* border-bottom: 1px solid #ff5b50; */
+    background-color: #ff5b50;
+    padding: 10px;
 }
 
 nav button {
@@ -67,12 +81,20 @@ nav button {
     gap: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    outline: none;
+    border: none;
     cursor: pointer;
+    transition: all .3s ease;
+}
+
+nav button:hover {
+    background-color: var(--color-logo);
+    color: #fff;
 }
 
 button img {
     width: 20px;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 /* MAIN STYLES */
@@ -100,7 +122,7 @@ button img {
 
 .featured-info {
     /* border: 1px dashed red; */
-    max-width: 1300px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 1.5fr 2fr .5fr;
     gap: 20px;
@@ -157,10 +179,10 @@ button img {
 
 .gallery-grid {
     display: grid;
-    margin: 50px auto 0 auto;
-    max-width: 1300px;
+    margin: 100px auto 0 auto;
+    max-width: 1200px;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 8px;
+    column-gap: 15px;
     row-gap: 40px;
 }
 
@@ -172,7 +194,7 @@ button img {
 .stats-ct {
     /* border: 1px dashed yellow; */
     background: var(--body-background);
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto 120px auto;
     color: #fff;
     display: grid;
@@ -224,7 +246,7 @@ button img {
 /* POPULARES DA SEMANA STYLES */
 
 .week-popular-ct {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto 120px auto;
     padding: 0 10px;
     background-color: var(--body-background);
@@ -249,7 +271,7 @@ button img {
 
 .left-cards-ct {
     /* border: 1px dashed red; */
-    padding: 20px 0;
+    padding: 20px 0 20px 100px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -258,7 +280,7 @@ button img {
 
 .right-cards-ct {
     /* border: 1px dashed blue; */
-    padding: 20px 0;
+    padding: 20px 100px 20px 0;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -302,8 +324,8 @@ button img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto 120px auto;
     padding: 0 10px;
 }
 
@@ -335,6 +357,12 @@ button img {
     align-items: center;
     gap: 10px;
     padding: 20px;
+    transition: all .4s ease;
+}
+
+.artist-card-item:hover {
+    cursor: pointer;
+    background: var(--color-logo);
 }
 
 .artist-card-item * {
@@ -350,7 +378,6 @@ button img {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-items: flex-start;
     gap: 10px;
 }
 
@@ -362,4 +389,8 @@ button img {
 .artist-photos-number {
     font-weight: 700;
     color: var(--color-logo);
+}
+
+.artist-card-item:hover .artist-info .artist-photos-number {
+    color: #fff;
 }

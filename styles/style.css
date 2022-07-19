@@ -394,3 +394,133 @@ button img {
 .artist-card-item:hover .artist-info .artist-photos-number {
     color: #fff;
 }
+
+/* FOOTER STYLES */
+
+.footer-ct {
+    background: rgb(49, 49, 49);
+    padding: 0 calc((100% - 1200px)/2);
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.footer-ct * {
+    background: rgb(49, 49, 49)
+}
+
+.back-to-top {
+    /* border: 1px dashed blue; */
+    border-bottom: 1px solid var(--subtitle-color);
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: span 2;
+}
+
+.back-to-top img {
+    width: 100%;
+}
+
+#logo {
+    width: 250px;
+}
+
+#black-arrow {
+    width: 100%;
+    background-color: #ff5b50;
+    padding: 20px;
+}
+
+.email-news {
+    /* border: 1px dashed white; */
+    border-right: 1px solid var(--subtitle-color);
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;    
+}
+
+.email-news h3 {
+    font-size: 1.4em;
+}
+
+.email-input-ct {
+    /* border: 1px dashed red; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.email-input-ct input {
+    height: 100%;
+    width: 200px;
+    outline: none;
+    border: none;
+    background-color: var(--color-input);
+    padding-left: 10px;
+    color: #fff;
+}
+
+.email-input-ct button {
+    height: 100%;
+    width: 80px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    color: #000;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.footer-navlist-ct {
+    /* border: 1px dashed white; */
+    display: flex;
+    align-items: center;
+    padding: 60px 0 60px 100px;
+    gap: 50px;
+}
+
+.footer-navlist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-navlist a {
+    color: var(--subtitle-color);
+}
+
+.footer-navlist li:first-child a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.social-infos-ct {
+    border-top: 1px solid var(--subtitle-color);
+    height: 100%;
+    grid-column: span 2;    
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--subtitle-color);
+}
+
+.social-logos-ct {
+    display: flex;
+    gap: 3em;
+}
+
+
+.social-logos-ct a:hover svg path {
+    stroke: var(--color-logo);
+    transition: all .3s ease;
+}
+

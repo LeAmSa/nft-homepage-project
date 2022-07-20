@@ -261,6 +261,65 @@ transition: transform .5s ease-in-out;
     /* border: 1px solid #fff; */
 }
 
+.carousel-container {
+    /* border: 1px dashed red; */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    max-width: 640px;
+    margin: 100px auto 0 auto;
+}
+
+.left-arrow,
+.right-arrow {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    opacity: .6;
+}
+
+.gallery-wrapper {
+    display: flex;
+    overflow-x: auto;
+    transition: all .6s ease;
+    /* border: 1px dashed white; */
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+
+.item {
+    opacity: .3;
+    transition: all .6s ease-in-out;
+    width: 100%;
+}
+
+.current-item {
+    opacity: 1;
+    border: 1px solid #fff;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* hide scrollbar for IE, edge and firefox */
+.gallery-wrapper {
+    scrollbar-width: none;
+}
+
+.carousel-container {
+    display: none;
+}
+
 .stats-ct {
     /* border: 1px dashed yellow; */
     background: var(--body-background);

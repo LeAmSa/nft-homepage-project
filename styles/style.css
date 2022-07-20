@@ -9,6 +9,7 @@
   --subtitle-color: #5a5757;
   --black-text: #000;
   --color-input: #0D0D0D;
+  --color-blue: #2D3AC7;
 }
 
 * {
@@ -186,9 +187,21 @@ button img {
     row-gap: 40px;
 }
 
+.gallery-item {
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+}
+
 .gallery-grid img {
     width: 100%;
-    border: 1px solid #fff;
+    transform: scale(1.1);
+    transition: all .4s ease-in-out;
+    /* border: 1px solid #fff; */
 }
 
 .stats-ct {
@@ -261,12 +274,51 @@ button img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    
+}
+
+.card-item-ct * {
+    background: transparent;
 }
 
 .card-item-ct {
-    /* border: 1px dashed white; */
     max-width: 300px;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.card-item-ct:hover {
+    cursor: pointer;
+}
+
+.card-item-ct:hover::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: 30%;
+    width: 40%;
+    height: 150%;
+    background: linear-gradient(var(--color-logo), var(--color-blue));
+    filter: blur(30px);
+    animation: animate 4s linear infinite;
+    z-index: 0;
+}
+
+.card-item-ct:hover::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--body-background);
+    z-index: 1;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .left-cards-ct {
@@ -297,14 +349,18 @@ button img {
 
 .card-item-title {
     display: flex;
+    position: relative;
     justify-content: space-between;
     margin-bottom: 30px;
+    z-index: 100;
 }
 
 .card-item-name-price {
     display: flex;
+    position: relative;
     justify-content: space-between;
     margin-bottom: 20px;
+    z-index: 100;
 }
 
 .nft-name {
@@ -315,6 +371,11 @@ button img {
 .nft-price {
     color: var(--color-logo);
     font-weight: 700;
+}
+
+.nft-img {
+    position: relative;
+    z-index: 100;
 }
 
 /* MELHORES ARTISTAS STYLES */

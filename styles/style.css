@@ -88,6 +88,17 @@ nav button {
     transition: all .3s ease;
 }
 
+#mobile-logo-ct {
+    display: flex;
+    align-items: center;
+}
+
+#mobile-badged-img {
+    display: none;
+    width: 50px;
+    margin-right: 5px;
+}
+
 nav button:hover {
     background-color: var(--color-logo);
     color: #fff;
@@ -735,4 +746,58 @@ transition: transform .5s ease-in-out;
 .social-logos-ct a:hover svg path {
     stroke: var(--color-logo);
     transition: all .3s ease;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 830px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* NAV STYLES */
+
+    .nav-list {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        height: 100vh;
+        width: 50vw;
+        background: var(--subtitle-color);
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all .4s ease;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    #mobile-badged-img {
+        display: block;
+    }
+
+    /* FEATURED CONTAINER STYLES */
+
+    #badged-img {
+        display: none;
+    }
+
+    .featured-info h1 {
+        grid-column: span 2;
+    }
+
+    .gallery-grid {
+        display: none;
+    }
+
+    .swiper.swiper-gallery {
+        display: block;
+    }
+
 }

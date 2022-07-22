@@ -17,3 +17,21 @@ const swiperGallery = new Swiper(".swiper-gallery", {
     keyboard: true,
     grabCursor: true,
 })
+
+const swiperArtists = new Swiper (".swiper-artists", {
+    loop: true,
+    lazy: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 60,
+    navigation: {
+        nextEl: ".btn-next-artists",
+        prevEl: ".btn-prev-artists",
+    },
+    pagination: {
+        el: ".pagination-artists",
+        clickable: true,
+    },
+    keyboard: true,
+    grabCursor: true,
+})

@@ -6,10 +6,10 @@ const swiperGallery = new Swiper(".swiper-gallery", {
     slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 20,
-    navigation: {
-        nextEl: ".btn-next-gallery",
-        prevEl: ".btn-prev-gallery",
-    },
+    // navigation: {
+    //     nextEl: ".btn-next-gallery",
+    //     prevEl: ".btn-prev-gallery",
+    // },
     pagination: {
         el: ".pagination-gallery",
         clickable: true,

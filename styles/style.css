@@ -33,6 +33,10 @@ ul, li, a {
     text-decoration: none;
 }
 
+a {
+    color: #fff;
+}
+
 nav {
     /* border: 1px dashed white; */
     background-color: transparent;
@@ -71,6 +75,10 @@ nav * {
     /* border-bottom: 1px solid #ff5b50; */
     background-color: #ff5b50;
     padding: 10px;
+}
+
+.wallet-ct {
+    display: none;
 }
 
 nav button {
@@ -487,9 +495,10 @@ transition: transform .5s ease-in-out;
 /* SWIPER WEEEK POPULAR STYLES */
 
 .swiper.swiper-week-popular {
+    padding-top: 25px;
     display: none;
-    height: 320px;
-    margin-bottom: 60px;
+    height: 360px;
+    margin-bottom: 120px;
 }
 
 .swiper.swiper-week-popular .swiper-slide {
@@ -505,7 +514,36 @@ transition: transform .5s ease-in-out;
 
 .swiper.swiper-week-popular .swiper-slide-active {
     opacity: 1;
-    
+}
+
+.swiper.swiper-week-popular .swiper-slide-active::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to top left, var(--color-logo) 0%, var(--color-blue) 100%);
+    transform: translate3d(0px, 10px, 0) scale(0.95);
+    filter: blur(20px);
+    opacity: .7;
+    transition: opacity .3s;
+}
+
+.swiper.swiper-week-popular .swiper-slide-active::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: inherit;
+}
+
+.swiper.swiper-week-popular .swiper-pagination {
+    background: transparent;
 }
 
 /* MELHORES ARTISTAS STYLES */
@@ -578,6 +616,7 @@ transition: transform .5s ease-in-out;
 }
 
 .artist-photos-number {
+    font-size: 14px;
     font-weight: 700;
     color: var(--color-logo);
 }
@@ -592,11 +631,11 @@ transition: transform .5s ease-in-out;
     padding-top: 40px;
     margin-bottom: 10px;
     width: 100%;
-    height: 380px;
+    height: 390px;
 }
 
 .swiper.swiper-artists .swiper-slide {
-    height: 272px;
+    height: 270px;
     max-width: 200px;
     opacity: .3;
 }
@@ -624,7 +663,7 @@ transition: transform .5s ease-in-out;
 }
 
 .swiper.swiper-artists .swiper-slide-active {
-    transform: scale(1.3);
+    transform: scale(1.2);
     transition: all .4s ease;
     opacity: 1;
 }
@@ -781,24 +820,62 @@ transition: transform .5s ease-in-out;
     nav {
         /* border: 1px dashed white; */
         position: fixed;
+        z-index: 1000;
         top: 0;
         width: 100%;
         height: 70px;
         background: #000;
     }
 
+    nav button {
+        display: none;
+    }
+
     /* NAV STYLES */
 
     .nav-list {
+        flex-direction: column;
+        gap: 0;
         position: absolute;
         top: 70px;
         right: 0;
         height: 100vh;
         width: 50vw;
-        background: var(--subtitle-color);
+        background: #fff;
         opacity: 0;
         transform: translateX(100%);
         transition: all .4s ease;
+    }
+
+    .nav-list li {
+        border-bottom: 1px solid #ff5c505d;
+        text-align: center;
+    }
+    
+    .nav-list li a {
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: #000;
+    }
+
+    .wallet-ct {
+        display: block;
+    }
+    
+    .wallet-ct img {
+        margin-right: 10px;
+    }
+
+    .nav-list .wallet-ct a:hover {
+        background-color: inherit;
+    }
+
+    .nav-list a:hover {
+        background-color: inherit;
+        padding: 20px 0;
     }
 
     .nav-list.active {

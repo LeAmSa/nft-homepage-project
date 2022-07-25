@@ -24,12 +24,26 @@ const swiperArtists = new Swiper (".swiper-artists", {
     slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 60,
-    navigation: {
-        nextEl: ".btn-next-artists",
-        prevEl: ".btn-prev-artists",
-    },
+    // navigation: {
+    //     nextEl: ".btn-next-artists",
+    //     prevEl: ".btn-prev-artists",
+    // },
     pagination: {
         el: ".pagination-artists",
+        clickable: true,
+    },
+    keyboard: true,
+    grabCursor: true,
+})
+
+const swiperWeekPopular = new Swiper(".swiper-week-popular", {
+    loop: true,
+    lazy: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 40,
+    pagination: {
+        el: ".pagination-week-popular",
         clickable: true,
     },
     keyboard: true,

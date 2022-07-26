@@ -1,0 +1,153 @@
+@media screen and (max-width: 830px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        /* border: 1px dashed white; */
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        background: #000;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    /* NAV STYLES */
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        height: 100vh;
+        width: 70vw;
+        background: #fff;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all .4s ease;
+    }
+
+    .nav-list li {
+        border-bottom: 1px solid #ff5c505d;
+        text-align: center;
+    }
+    
+    .nav-list li a {
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: #000;
+    }
+
+    .wallet-ct {
+        display: block;
+    }
+    
+    .wallet-ct img {
+        margin-right: 10px;
+    }
+
+    .nav-list .wallet-ct a:hover {
+        background-color: inherit;
+    }
+
+    .nav-list a:hover {
+        background-color: inherit;
+        padding: 20px 0;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    #mobile-badged-img {
+        display: block;
+    }
+
+    .main-logo {
+        width: 150px;
+    }
+
+    /* FEATURED CONTAINER STYLES */
+
+    .featured-ct {
+        padding: 60px 10px;
+    }
+
+    #badged-img {
+        display: none;
+    }
+
+    .featured-info {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-info h1 {
+        grid-row: 1 / 2;
+        font-size: 2.5em;
+    }
+
+    .featured-info div:first-child {
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        display: none;
+    }
+
+    .swiper.swiper-gallery {
+        display: block;
+    }
+
+    .left-cards-ct {
+        padding: 0;
+    }
+
+    .right-cards-ct {
+        padding: 0;
+    }
+
+    .best-artists-ct {
+        padding: 0;
+    }
+
+    .best-artists-ct h1 {
+        margin-bottom: 60px;
+    }
+
+    .artists-cards-ct {
+        display: none;
+    }
+
+    .swiper.swiper-artists {
+        display: block;
+        width: 100%;
+    }
+    
+    /* STATS-CT STYLES */
+
+    .num-cat-ct h1 {
+        font-size: 1.5em;
+    }
+
+    /* WEEK POPULAR CT STYLES */
+
+    .week-popular-ct h1 {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,67 @@
+@media screen and (max-width: 601px) {
+    .stats-ct {
+        grid-template-columns: 1fr;
+    }
+
+    .num-cat-ct {
+        grid-row: 1;
+        flex-direction: row;
+        padding: 10px 0;
+    }
+
+    .description-ct {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .week-popular-ct {
+        margin-bottom: 60px;
+    }
+
+    .week-popular-ct h1 {
+        font-size: 2em;
+    }
+
+    .best-artists-ct h1 {
+        margin: 0 auto 60px auto;
+        font-size: 2em;
+    }
+
+    .cards-ct {
+        display: none;
+    }
+
+    .swiper.swiper-week-popular {
+        display: block;
+    }
+
+    .footer-ct {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        width: 100%;
+    }
+
+    .back-to-top {
+        grid-column: 1 / 2;
+        border-bottom: 1px solid var(--subtitle-color);
+    }
+
+    .email-news {
+        grid-row: 2;
+        justify-self: center;
+        border-right: none;
+    }
+
+    .footer-navlist-ct {
+        grid-row: 3;
+        padding: 20px 0;
+        justify-content: center;
+        border-top: 1px solid var(--subtitle-color);
+    }
+
+    .social-infos-ct {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+}
